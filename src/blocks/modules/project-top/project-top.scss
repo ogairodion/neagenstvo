@@ -1,0 +1,606 @@
+.project-top {
+    position: relative;
+    margin-top: 81px;
+    margin-bottom: 12px;
+    @media screen and (max-width: 991px) {
+        margin-top: 60px;
+        margin-bottom: 6px;
+    }
+    &-wunderfrucht {
+        .project-top {
+            &__text {
+                position: absolute;
+                z-index: 2;
+                top: 30%;
+                right: 7%;
+                width: 100%;
+                @media screen and (max-width: 1440px) {
+                    top: 35%;
+                }
+                @media screen and (max-width: 767px) {
+                    top: 20%;
+                }
+                @media screen and (max-width: 650px) {
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 100%;
+                    background: rgba(#fff, .8);
+                    padding: 0 20px;
+                    @media screen and (max-width: 600px) {
+                        padding: 0 10px; 
+                    } 
+                } 
+                p {
+                    width: 38%;
+                    margin-left: auto;
+                    @media screen and (max-width: 650px) {
+                        width: 100%;
+                    }
+                    &:first-child {
+                        font-size: calc( 0.0134 * 100vw + 10px );
+                        line-height: 120%;
+                        font-weight: 900;
+                        margin-bottom: 1em;
+                        @media screen and (max-width: 1020px) {
+                            font-size: calc( 0.0124 * 100vw + 10px );
+                        } 
+                        @media screen and (max-width: 800px) {
+                            font-size: calc( 0.0104 * 100vw + 10px );
+                        } 
+                        @media screen and (max-width: 725px) {
+                            font-size: calc( 0.0084 * 100vw + 10px );
+                        } 
+                        @media screen and (max-width: 499px) {
+                            font-size: 14px;
+                        } 
+                    }
+                    &:last-child {
+                        font-size: calc( 0.0084 * 100vw + 10px );
+                        line-height: 140%;
+                        @media screen and (max-width: 1020px) {
+                            font-size: calc( 0.0064 * 100vw + 10px );
+                        } 
+                        @media screen and (max-width: 725px) {
+                            font-size: calc( 0.0024 * 100vw + 10px );
+                        } 
+                        @media screen and (max-width: 499px) {
+                            font-size: 14px;
+                            line-height: 120%;
+                        } 
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 1186px;
+                background: url('.././img/projects/wunderfrucht/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 500px;
+                }
+                @media screen and (max-width: 499px) {
+                    min-height: 450px;
+                    background-size: cover;
+                    background-position: 30%;
+                }
+            }
+        }
+    }
+    &-imugi {
+        .project-top {
+            &__text {
+                width: calc(33.3333% - 200px);
+                margin: 0 100px;
+                @media screen and (max-width: 1599px) {
+                    width: calc(33.3333% - 100px);
+                    margin: 0 50px;       
+                }
+                @media screen and (max-width: 1099px) {
+                    width: calc(33.3333% - 40px);
+                    margin: 0 20px;       
+                }
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    margin: 0;
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 140%;
+                    margin: 0 0 30px;
+                    @media screen and (max-width: 1399px) {
+                        font-size: 16px;
+                        margin: 0 0 20px;
+                    }
+                    @media screen and (max-width: 767px) {
+                        font-size: 13px;
+                        margin: 0 0 12px;
+                    }
+                }
+                &--bold {
+                    p {
+                        font-size: 24px;
+                        line-height: 120%;
+                        font-weight: 900;
+                        @media screen and (max-width: 1399px) {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                &-wrapper {
+                    position: absolute;
+                    top: 80px;
+                    left: 5%;
+                    z-index: 2;
+                    display: flex;
+                    width: 100%;
+                    margin: 0 -100px;
+                    @media screen and (max-width: 1599px) {
+                        margin: 0 -50px;       
+                    }
+                    @media screen and (max-width: 1399px) {
+                        top: 60px;
+                    }
+                    @media screen and (max-width: 1099px) {
+                        top: 20px;
+                        margin: 0 -20px;       
+                    }
+                    @media screen and (max-width: 767px) {
+                        top: 0;
+                        left: 0;
+                        flex-direction: column;
+                        background: rgba(#fff, .6);
+                        padding: 20px 12px 0;
+                        margin: 0;
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 944px;
+                background: url('.././img/projects/imugi/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 600px;
+                }
+                @media screen and (max-width: 499px) {
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    &-nabu {
+        .project-top {
+            &__text {
+                p {
+                    font-size: 18px;
+                    line-height: 120%;
+                    margin-bottom: 25px;
+                    @media screen and (max-width: 1499px) {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                    }
+                }
+                &--bold {
+                    margin-bottom: 40px;
+                    @media screen and (max-width: 1099px) {
+                        margin-bottom: 20px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        font-size: 30px;
+                        line-height: 120%;
+                        font-weight: 900;
+                        @media screen and (max-width: 1499px) {
+                            font-size: 24px;
+                        }
+                        @media screen and (max-width: 1099px) {
+                            font-size: 18px;
+                        }
+                        @media screen and (max-width: 991px) {
+                            font-size: 16px;
+                        }
+                        @media screen and (max-width: 600px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &-wrapper {
+                    position: absolute;
+                    top: 10%;
+                    left: 5%;
+                    z-index: 2;
+                    width: 20%;
+                    color: #fff;
+                    @media screen and (max-width: 1299px) {
+                        width: 30%;
+                    }
+                    @media screen and (max-width: 1099px) {
+                        top: 0;
+                        left: 0;
+                        padding: 20px 12px;
+                    }
+                    @media screen and (max-width: 991px) {
+                        width: 60%;
+                        height: 100%;
+                        background: rgba(#000, .6);
+                        padding: 8px;
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 1189px;
+                background: url('.././img/projects/nabu/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                background-position: top center;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 600px;
+                }
+                @media screen and (max-width: 499px) {
+                    min-height: 550px;
+                    background-size: cover;
+                    background-position: 80%;
+                }
+            }
+        }
+    }
+    &-marussia {
+        .project-top {
+            &__text {
+                p {
+                    font-size: 18px;
+                    line-height: 160%;
+                    margin-bottom: 40px;
+                    @media screen and (max-width: 1599px) {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                    }
+                }
+                &--bold {
+                    margin-bottom: 40px;
+                    @media screen and (max-width: 1099px) {
+                        margin-bottom: 20px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        font-size: 30px;
+                        line-height: 120%;
+                        font-weight: 900;
+                        @media screen and (max-width: 1599px) {
+                            font-size: 24px;
+                        }
+                        @media screen and (max-width: 1099px) {
+                            font-size: 18px;
+                        }
+                        @media screen and (max-width: 600px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                &-wrapper {
+                    position: absolute;
+                    top: 20%;
+                    left: 15%;
+                    z-index: 2;
+                    width: 20%;
+                    color: #fff;
+                    @media screen and (max-width: 1499px) {
+                        width: 25%;
+                    }
+                    @media screen and (max-width: 1199px) {
+                        top: 10%;
+                        left: 5%;
+                        width: 40%;
+                    }
+                    @media screen and (max-width: 699px) {
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 60%;
+                        height: 100%;
+                        padding: 20px 10px;
+                        background: rgba(#000, .6);
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 1050px;
+                background: url('.././img/projects/marussia/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                background-position: right;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 600px;
+                }
+                @media screen and (max-width: 499px) {
+                    min-height: 550px;
+                    background-size: cover;
+                    background-position: 80%;
+                }
+            }
+        }
+    }
+    &-waxula {
+        .project-top {
+            &__text {
+                p {
+                    font-size: 24px;
+                    line-height: 160%;
+                    margin-bottom: 40px;
+                    @media screen and (max-width: 1599px) {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                    }
+                }
+                &-wrapper {
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    z-index: 2;
+                    width: 20%;
+                    color: #fff;
+                    @media screen and (max-width: 991px) {
+                        top: 2%;
+                        width: 50%;
+                    }
+                    @media screen and (max-width: 699px) {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 20px 12px;
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 1050px;
+                background: url('.././img/projects/waxula/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 600px;
+                }
+                @media screen and (max-width: 499px) {
+                    min-height: 550px;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    &-digo {
+        .project-top {
+            &__text {
+                p {
+                    font-size: 24px;
+                    line-height: 160%;
+                    margin-bottom: 40px;
+                    @media screen and (max-width: 1599px) {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                    }
+                }
+                &-wrapper {
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    z-index: 2;
+                    @media screen and (max-width: 991px) {
+                        top: 2%;
+                    }
+                    @media screen and (max-width: 699px) {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 12px 20px;
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 1050px;
+                background: url('.././img/projects/digo/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 600px;
+                }
+                @media screen and (max-width: 499px) {
+                    min-height: 350px;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    &-akvafor {
+        .project-top {
+            &__text {
+                p {
+                    font-size: 24px;
+                    line-height: 160%;
+                    margin-top: 0;
+                    @media screen and (max-width: 1599px) {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 12px;
+                    }
+                }
+                &-wrapper {
+                    position: absolute;
+                    top: 5%;
+                    left: 5%;
+                    width: 50%;
+                    z-index: 2;
+                    @media screen and (max-width: 991px) {
+                        top: 2%;
+                    }
+                    @media screen and (max-width: 699px) {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 8px 20px;
+                    }
+                }
+            }
+            &__img {
+                position: relative;
+                display: flex;
+                width: 100%;
+                min-height: 1050px;
+                background: url('.././img/projects/akvafor/1.jpg'); 
+                background-repeat: no-repeat; 
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+                @media screen and (max-width: 1499px) {
+                    min-height: calc(100vh - 81px);
+                }
+                @media screen and (max-width: 1099px) {
+                    min-height: 600px;
+                }
+                @media screen and (max-width: 499px) {
+                    min-height: 250px;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+    &-chainaya-vysota {
+        background: #9DAF4C;
+        padding: 143px 0 125px;
+        @media screen and (max-width: 1199px) {
+            padding: 50px 0;
+        }
+        @media screen and (max-width: 767px) {
+            padding: 30px 0;
+        }
+        .l-default {
+            max-width: 1680px;
+        }
+        .project-top {
+            &__wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                }
+            }
+            &__text {
+                max-width: 367px;
+                color: #fff;
+                @media screen and (max-width: 767px) {
+                    margin: 0 auto;
+                }
+                &-wrapper {
+                    width: 40%;
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                    }
+                }
+                p {
+                    font-size: 24px;
+                    line-height: 120%;
+                    margin-top: 0;
+                    @media screen and (max-width: 1199px) {
+                        font-size: 18px;
+                    }
+                    @media screen and (max-width: 767px) {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+                }
+                &--bold {
+                    p {
+                        font-size: 36px;
+                        line-height: 120%;
+                        font-weight: 900;
+                        margin-bottom: 73px;
+                        @media screen and (max-width: 1199px) {
+                            font-size: 30px;
+                            margin-bottom: 20px;
+                        }
+                        @media screen and (max-width: 767px) {
+                            font-size: 24px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            &__img {
+                img {
+                    @media screen and (max-width: 1199px) {
+                        max-width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
+    

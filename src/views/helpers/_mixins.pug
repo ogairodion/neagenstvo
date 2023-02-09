@@ -1,0 +1,21 @@
+mixin svgMono(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class="ico ico-mono-" + name + modClass)
+    use(xlink:href= 'img/sprite-mono.svg#ico-mono-' + name)
+
+mixin svgColor(name, modClass)
+  if modClass == undefined
+    - var modClass = ''
+  else
+    - var modClass = ' ' + modClass
+  svg(class="ico ico-color-" + name + modClass)
+    use(xlink:href= 'img/sprite-color.svg#ico-color-' + name)
+
+mixin webp(name, type='jpg',alt)
+  picture
+    source(srcset="/img/"+name+".webp" type="image/webp")
+    source(srcset="/img/"+name+"."+type+"" type="image/"+type+"")
+    img(src="/img/"+name+"."+type+"" alt=""+alt+"")

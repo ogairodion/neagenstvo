@@ -1,0 +1,38 @@
+-
+    const scheme_items = [
+        {
+            number: "01",
+            text: ["Личная встреча", "Обсуждение проекта", "Брифинг."]
+        },
+        {
+            number: "02",
+            text: ["Заключение договора."],
+        },
+        {
+            number: "03",
+            text: ["Разработка концепций", "обсуждение вариантов"],
+        },
+        {
+            number: "04",
+            text: ["Доработка выбранного варианта", "утверждение"],
+        },
+        {
+            number: "05",
+            text: ["Выплата оставшейся части суммы.", "Передача макетов"],
+        },
+        {
+            number: "06",
+            text: ["Поддержка проекта, <br> на всех этапах реализации"],
+        }
+    ]
+
+section.scheme#scheme
+    .l-default 
+        h3.scheme__title.title.title--h3.text--effect Схема работы
+        .scheme__item
+            .scheme__list
+                each scheme_item in scheme_items
+                    .scheme__list-item
+                        .scheme__list-number.text--effect= scheme_item.number
+                        each scheme_text in scheme_item.text
+                            .scheme__list-text.text--effect!= scheme_text

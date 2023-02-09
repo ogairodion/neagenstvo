@@ -1,0 +1,56 @@
+{{ $_ := env "CI_PROJECT_PATH_SLUG"  | trunc 49 | trimSuffix "-" | set . "ProjectName" }}
+{{ $_ := env "ENV_NAME_FULL"  | trunc 49 | trimSuffix "-" | set . "EnvName" }}
+---
+configVersion: 1
+project: {{ .ProjectName }}
+---
+artifact: public-folder
+from: node:14-alpine
+git:
+  - add: /
+    to: /app
+    excludePaths:
+      - werf.yaml
+      - .gitlab-ci.yml
+      - .helm
+    stageDependencies:
+      install:
+        - package.json
+      beforeSetup:
+        - "**/*"
+shell:
+  beforeInstall:
+  - apk --update add git freetype-dev libjpeg-turbo libjpeg-turbo-dev libjpeg-turbo-utils libpng libpng-dev libxml2-dev make autoconf automake libtool bash g++ file build-base nasm musl zlib-dev curl
+  install:
+  - cd /app
+  - yarn install
+  beforeSetup:
+  - cd /app
+  - export NODE_ENV="{{ .EnvName }}"
+  - yarn build
+---
+image: app
+from: hub.synergy.ru/infrastructure-images-nginx/nginx:latest
+docker:
+  WORKDIR: /var/www/html
+  ENTRYPOINT:
+    - /entrypoint.sh
+  CMD:
+    - nginx
+    - -g
+    - daemon off;
+import:
+  - artifact: public-folder
+    add: /app/dist
+    to: /var/www/html
+    after: install
+git:
+  - add: /.helm/cmd/app
+    to: /
+    stageDependencies:
+      install:
+        - "**/*"
+shell:
+  install:
+  - chmod +x /*.sh
+---

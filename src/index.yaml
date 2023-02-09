@@ -1,0 +1,21 @@
+ProjectTitle: ProjectName
+
+PageList:
+  - file: homepage.html
+    ready: 100
+  - file: wunderfrucht.html
+    ready: 100
+  - file: imugi.html
+    ready: 100
+  - file: marussia.html
+    ready: 100
+  - file: digo.html
+    ready: 100
+  - file: akvafor.html
+    ready: 100
+  - file: waxula.html
+    ready: 100
+  - file: nabu.html
+    ready: 100
+  - file: chainaya-vysota.html
+    ready: 100

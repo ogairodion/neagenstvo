@@ -1,0 +1,23 @@
+- 
+    const header_menu = [
+        {
+            href: "/",
+            text: "Вернуться на главную"
+        }
+    ]
+
+header.header.header-project
+    .shadow.hidden
+    .l-default
+        .header__wrapper 
+            a.header__logo(href="/") 
+                +svgMono("logo")
+            .header__menu
+                each header_menu_item in header_menu
+                    a.header__menu-item.scroll(href=header_menu_item.href)= header_menu_item.text
+            a.header__phone(href="tel:+74952554645") 8 (495) 255-46-45
+            .header__burger 
+                span 
+                span 
+                span 
+        .header__mobile

@@ -1,0 +1,68 @@
+-
+    const about_items = [
+        {
+            number: "150+",
+            text: "реализованных проектов"
+        },
+        {
+            number: "50%",
+            text: "клиентов по рекомендации"
+        },
+        {
+            number: "7",
+            text: "лет опыта с крупными брендами"
+        }
+    ]
+
+    const about_slides = [
+        {
+            img: "katcevich",
+            name: "Сергей Кацевич",
+            position: "Креативный дизайнер"
+        },
+        {
+            img: "avilkina",
+            name: "Женя Авилкина",
+            position: "Веб-дизайнер"
+        },
+        {
+            img: "grabko",
+            name: "Александр Грабко",
+            position: "Проджект менеджер"
+        },
+        {
+            img: "andreeva",
+            name: "Елена Андреева",
+            position: "Копирайтер"
+        },
+        {
+            img: "jukovskyi",
+            name: "Максим Жуковский",
+            position: "Дизайнер по упаковке"
+        }
+    ]
+
+section.about#about
+    .l-default 
+        .about__top
+            .about__top-item
+                h3.about__title.title.title--h3.text--effect О нас
+            .about__top-item
+                each about_item in about_items
+                    .about__item
+                        .about__item-number.text--effect= about_item.number
+                        .about__item-text.text--effect= about_item.text
+        .about__texts.text--effect   
+            p Неагентство - это команда профессионалов, которые работали в рекламных и брендинговых агентствах. У нас за плечами – огромный опыт в выполнении проектов для крупных компаний.
+            p Мы знаем, как сильно страдают идеи, когда их передают из отдела в отдел, от заказчика к исполнителю, через третьи руки. И мы хотим сократить этот путь и выстраивать диалог напрямую.
+            p Поэтому, мы – не агентство. Мы отметаем все лишнее, что усложняет диалог, и все то, что тормозит работу. Мы за отказ от лишних слов и сложных терминов. Давайте говорить на простом языке и решать задачи бизнеса.
+        .about__slider
+            each about_slide in about_slides
+                .about__slide
+                    .about__slide-img
+                        picture
+                            source(data-srcset="img/about/" + about_slide.img + ".webp" type="image/webp")
+                            source(data-srcset="img/about/" + about_slide.img + ".jpg" type="image/jpg")
+                            img.lazy(data-src="img/about/" + about_slide.img + ".jpg" alt="")
+                    .about__slide-name.text--effect= about_slide.name
+                    .about__slide-position.text--effect= about_slide.position

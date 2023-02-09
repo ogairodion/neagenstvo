@@ -1,0 +1,31 @@
+-
+    const cost_items = [
+        {
+            title: "Разработка брендбука",
+            text: "Документ, регламентирующий правила использования фирменного стиля бренда, в соответствии с выбранной стратегией",
+            price: "190"
+        },
+        {
+            title: "Айдентика и упаковка",
+            text: "Фирменный стиль компании, позволяющий формировать нужный образ в глазах клиентов и партнеров",
+            price: "350"
+        },
+        {
+            title: "Стратегия, креатив, брендинг",
+            text: "Разработка названия, свод правил, описывающий <br>стратегию бренда и регламентирующий правила использования фирменного стиля бренда.",
+            price: "750"
+        }
+    ]
+
+section.cost
+    .l-default 
+        //- h3.cost__title.title.title--h3.text--effect Стоимость
+        .cost__items
+            each cost_item in cost_items
+                .cost__item
+                    .cost__item-title.text--effect= cost_item.title
+                    .cost__item-text.text--effect!= cost_item.text
+                    //- .cost__item-price 
+                    //-     .cost__item-small--top.text--effect от
+                    //-     .cost__item-price--number.text--effect= cost_item.price
+                    //-     .cost__item-small--bottom.text--effect тыс. ₽

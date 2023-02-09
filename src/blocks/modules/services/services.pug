@@ -1,0 +1,31 @@
+-
+    const lists = [
+        {
+            title: "Дизайн",
+            items: ["Корпоративный брендинг", "Дизайн упаковки", "Сайт под ключ", "Фотография", "3D Визуализация"]
+        },
+        {
+            title: "Копирайт",
+            items: ["Разработка названия", "Позиционирование бренда", "Тексты для сайтов", "СEO — контент"]
+        },
+        {
+            title: "Сопровождение бренда",
+            items: ["Дизайн-поддержка", "Разработка СТМ", "Развитие линейки продуктов", "Реклама и key-visuals"]
+        }
+    ]
+
+section.services#services
+    .l-default 
+        .services__wrapper
+            .services__item
+                h3.services__title.title.title--h3.text--effect услуги
+            .services__item.services__lists     
+                each list in lists
+                    .services__list
+                        .services__list-title.text--effect= list.title
+                        each list_item in list.items
+                            .services__list-text.text--effect= list_item
+            .services__item.services__bottom
+                .services__bottom-text.text--effect Не нашли нужную услугу?<br> Напишите нам.<br> Мы на связи.
+            .services__item
+                a.services__btn.btn.btn--circle.text--effect(href="https://wa.me/79266664645") WhatsApp<br> чат

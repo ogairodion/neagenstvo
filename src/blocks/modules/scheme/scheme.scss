@@ -1,0 +1,83 @@
+.scheme {
+    &__item {
+        width: 50%;
+        margin-left: auto;
+        @media screen and (max-width: 1199px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    &__title {
+        margin-bottom: 120px;
+        @media screen and (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+        @media screen and (max-width: 600px) {
+            margin-bottom: 60px;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;    
+        &-item {
+            width: calc(33.3333% - 20px);
+            margin: 0 10px 60px;
+            @media screen and (max-width: 991px) {
+                margin: 0 10px 40px;
+            }
+            @media screen and (max-width: 600px) {
+                width: calc(50% - 20px);
+            }
+            &:nth-child(3n) {
+                .scheme {
+                    &__list {
+                        &-number {
+                            &:after {
+                                display: none;
+                                @media screen and (max-width: 600px) {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-number {
+            position: relative;
+            font-size: 64px;
+            line-height: 120%;
+            margin-bottom: 30px;
+            @media screen and (max-width: 991px) {
+                font-size: 45px;
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: 600px) {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+            &:after {
+                position: absolute;
+                top: 50%;
+                right: -25%;
+                transform: translate(-50%, -50%);
+                content: '';
+                width: 60%;
+                height: 2px;
+                background: #000;
+                @media screen and (max-width: 991px) {
+                    height: 1px;
+                }
+                @media screen and (max-width: 600px) {
+                    display: none !important;
+                }
+            }
+        }
+        &-text {
+            font-size: 18px;
+            font-weight: 300;
+            color: #555555;
+        }
+    }
+}

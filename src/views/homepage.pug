@@ -1,0 +1,22 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "Neagenstvo"
+
+block content
+      include ../blocks/modules/loader/loader.pug
+      include ../blocks/modules/header/header.pug
+      .main
+        include ../blocks/modules/main-top/main-top.pug
+        include ../blocks/modules/projects/projects.pug
+        include ../blocks/modules/about/about.pug
+        include ../blocks/modules/services/services.pug
+        include ../blocks/modules/scheme/scheme.pug
+        include ../blocks/modules/cost/cost.pug
+      include ../blocks/modules/footer/footer.pug
+      include ../blocks/modules/popups/popups.pug
+
+block scripts
+  script(defer src="js/vendor.js")
+  script(defer src="js/main.js")

@@ -1,0 +1,65 @@
+-
+    const projects = [
+        {
+            img: "wunderfrucht",
+            href: "wunderfrucht",
+            text: "Дизайн упаковки WUNDERFRUCHT",
+        },
+        {
+            img: "waxula",
+            href: "waxula",
+            text: "Брендирование сети барбершопов WAXULA",
+            class: "projects__item-white"
+        },
+        {
+            img: "nabu",
+            href: "nabu",
+            text: "Ребрендинг и дизайн упаковки чая"
+        },
+        {
+            img: "digo",
+            href: "digo",
+            text: "Ребрендинг компании DIGO"
+        },
+        {
+            img: "akvafor",
+            href: "akvafor",
+            text: "Брендинг для компании Аквафор"
+        },
+        {
+            img: "marussia",
+            href: "marussia",
+            text: "Разработка упаковки",
+            class: "projects__item-white"
+        },
+        {
+            img: "chainaya-vysota",
+            href: "chainaya-vysota",
+            text: "Айдентика для дома чая и мороженого",
+            class: ""
+        },
+        {
+            img: "imugi",
+            href: "imugi",
+            text: "Разработка дизайн упаковки для кофе из Кореи",
+            class: ""
+        }
+    ]
+
+section.projects#projects
+    .l-default 
+        .projects__wrapper
+            h2.projects__title.title.title--h2 Некоторые наши проекты
+            .projects__items
+                each project_item in projects
+                    a.projects__item(href='/' + project_item.href + '.html' class=project_item.class)    
+                        picture
+                            source(data-srcset="img/projects/" + project_item.img + ".webp" type="image/webp")
+                            source(data-srcset="img/projects/" + project_item.img + ".jpg" type="image/jpg")
+                            img.projects__item-img.lazy(data-src="img/projects/" + project_item.img + ".jpg" alt="")
+                        .projects__item-text= project_item.text
+            a.projects__items-btn.btn.btn--more(href="")
+                <svg class="btn--icon" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.57495 2L8.92508 8L2.57495 14" stroke="#00E569" stroke-width="5"/>
+                </svg> 
+                label.btn--text Смотреть все работы

@@ -1,0 +1,59 @@
+-
+    const projects = [
+        {
+            img: "wunderfrucht",
+            href: "wunderfrucht",
+            text: "Дизайн упаковки WUNDERFRUCHT",
+        },
+        {
+            img: "waxula",
+            href: "waxula",
+            text: "Брендирование сети барбершопов WAXULA",
+            class: "projects__item-white"
+        },
+        {
+            img: "nabu",
+            href: "nabu",
+            text: "Ребрендинг и дизайн упаковки чая"
+        },
+        {
+            img: "digo",
+            href: "digo",
+            text: "Ребрендинг компании DIGO"
+        },
+        {
+            img: "akvafor",
+            href: "akvafor",
+            text: "Брендинг для компании Аквафор"
+        },
+        {
+            img: "marussia",
+            href: "marussia",
+            text: "Разработка упаковки",
+            class: "projects__item-white"
+        },
+        {
+            img: "chainaya-vysota",
+            href: "chainaya-vysota",
+            text: "Айдентика для дома чая и мороженого",
+            class: ""
+        },
+        {
+            img: "imugi",
+            href: "imugi",
+            text: "Разработка дизайн упаковки для кофе из Кореи",
+            class: ""
+        }
+    ]
+
+section.projects.projects-page#projects
+    .projects__wrapper
+        h2.projects__title.title.title--h2 Наши остальные проекты
+        .projects__items
+            each project_item in projects
+                a.projects__item.project__item--page(href='/' + project_item.href + '.html' class=project_item.class)    
+                    picture
+                        source(data-srcset="img/projects/" + project_item.img + ".webp" type="image/webp")
+                        source(data-srcset="img/projects/" + project_item.img + ".jpg" type="image/jpg")
+                        img.projects__item-img.lazy(data-src="img/projects/" + project_item.img + ".jpg" alt="")
+                    .projects__item-text= project_item.text

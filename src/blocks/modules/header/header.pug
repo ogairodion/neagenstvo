@@ -1,0 +1,39 @@
+- 
+    const header_menu = [
+        {
+            href: "#services",
+            text: "Услуги"
+        },
+        {
+            href: "#about",
+            text: "О нас"
+        },
+        {
+            href: "#projects",
+            text: "Проекты"
+        },
+        {
+            href: "#scheme",
+            text: "Принцип работы"
+        },
+        {
+            href: "#footer",
+            text: "Контакты"
+        }
+    ]
+
+header.header   
+    .shadow.hidden
+    .l-default
+        .header__wrapper 
+            a.header__logo(href="/") 
+                +svgMono("logo")
+            .header__menu
+                each header_menu_item in header_menu
+                    a.header__menu-item.scroll(href=header_menu_item.href)= header_menu_item.text
+            a.header__phone(href="tel:+79253240039") 8(925) 324-00-39
+            .header__burger 
+                span 
+                span 
+                span 
+        .header__mobile
